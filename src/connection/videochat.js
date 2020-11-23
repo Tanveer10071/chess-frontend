@@ -1,14 +1,4 @@
 import React, { useEffect, useState, useRef } from 'react';
-import {
-  RTCPeerConnection,
-  RTCIceCandidate,
-  RTCSessionDescription,
-  RTCView,
-  MediaStream,
-  MediaStreamTrack,
-  mediaDevices,
-  registerGlobals
-} from 'react-native-webrtc';
 import Peer from "simple-peer";
 import styled from "styled-components";
 const socket  = require('../connection/socket').socket
@@ -55,7 +45,7 @@ function VideoChatApp(props) {
   const partnerVideo = useRef();
 
   useEffect(() => {
-    mediaDevices.getUserMedia({ video: true, audio: true }).then(stream => {
+    navigator.mediaDevices.getUserMedia({ video: true, audio: true }).then(stream => {
       setStream(stream);
       if (userVideo.current) {
         userVideo.current.srcObject = stream;
