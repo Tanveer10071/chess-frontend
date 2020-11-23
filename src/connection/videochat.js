@@ -50,7 +50,7 @@ function VideoChatApp(props) {
       if (userVideo.current) {
         userVideo.current.srcObject = stream;
       }
-    })
+    }) 
 
     socket.on("hey", (data) => {
       setReceivingCall(true);
