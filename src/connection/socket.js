@@ -3,7 +3,7 @@ import io from 'socket.io-client'
 //const URL = 'https://multiplayer-chess-game-app.herokuapp.com/' 
 //tanveer - server url
 //const URL = 'http://localhost:8000/' 
-const URL = 'http://192.168.20.160:8000/' 
+const URL = 'https://192.168.20.160:8000/' 
 
 
 const socket = io(URL)

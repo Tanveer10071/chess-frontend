@@ -247,7 +247,7 @@ const ChessGameWrapper = (props) => {
     //const domainName = 'http://chesswithfriend.com'
      //tanveer - front end url
      //const domainName = 'http://localhost:3000'
-     const domainName = 'http://192.168.20.160:3000/';
+     const domainName = 'https://192.168.20.160:9443';
     const color = React.useContext(ColorContext)
     const { gameid } = useParams()
     const [play] = useSound(chessMove);
